@@ -18,3 +18,51 @@ header {
     gap: 0.2rem;
     height: 50%;
 }
+
+.vlc-logo {
+    height: 90%;
+}
+
+#title-txt {
+    font-size: 1rem;
+}
+
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.menu {
+    margin: 4px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.menu:hover .menu-items {
+    display: block;
+}
+
+.menu-btn {
+    font-weight: bold;
+    padding: 6px;
+}
+
+.menu-items {
+    list-style: none;
+    background-color: rgb(238, 238, 238);
+    position: absolute;
+    top: 15px;
+    padding: 0px;
+    display: none;
+}
+
+.menu-items:hover {
+    display: block;
+}
+
+.menu-btn:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
