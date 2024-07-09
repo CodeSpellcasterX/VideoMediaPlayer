@@ -66,3 +66,25 @@ header {
     background-color: lightblue;
     cursor: pointer;
 }
+
+li:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+li {
+    padding: 2px;
+    width: 6rem;
+}
+.footer {
+    height: 3rem;
+    background-color: rgb(238, 238, 238);
+}
+
+#input-file {
+    display: none;
+}
+
+#video {
+    height: 100%;
+}
