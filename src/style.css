@@ -88,3 +88,22 @@ li {
 #video {
     height: 100%;
 }
+
+.main {
+    background-color: black;
+    height: calc(100vh - 7rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toast {
+    top: 5rem;
+    padding: 0.2rem;
+    right: 2rem;
+    background-color: gray;
+    color: white;
+    position: fixed;
+    display: none;
+    font-size: 2rem;
+}
