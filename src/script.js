@@ -22,3 +22,27 @@ openVideo.addEventListener("change", (obj) => {
     videoElement.setAttribute("id", "video")
     mainElement.appendChild(videoElement);
 })
+
+volumeUpElement.addEventListener("click", () => {
+    const videoElement = document.getElementById("video");
+    if(videoElement!=null && video.volume<=0.9) {
+        video.volume = video.volume+0.1;
+    }
+    toastMessage.style.display = "block"
+    toastMessage.textContent = video.volume * 100;
+    setTimeout(() => {
+        toastMessage.style.display = "none"
+    },2000)
+})
+
+volumeDownElement.addEventListener("click", () => {
+    const videoElement = document.getElementById("video");
+    if(videoElement!=null && video.volume>=0.1) {
+        video.volume = video.volume-0.1;
+    }
+    toastMessage.style.display = "block"
+    toastMessage.textContent = video.volume * 100;
+    setTimeout(() => {
+        toastMessage.style.display = "none"
+    },2000)
+})
