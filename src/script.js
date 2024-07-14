@@ -46,3 +46,27 @@ volumeDownElement.addEventListener("click", () => {
         toastMessage.style.display = "none"
     },2000)
 })
+
+speedUpElement.addEventListener("click", () => {
+    const videoElement = document.getElementById("video");
+    if(videoElement!=null && video.playbackRate<=2.5) {
+        video.playbackRate = video.playbackRate+0.5;
+    }
+    toastMessage.style.display = "block"
+    toastMessage.textContent = video.playbackRate + "x";
+    setTimeout(() => {
+        toastMessage.style.display = "none"
+    },2000)
+})
+
+speedDownElement.addEventListener("click", () => {
+    const videoElement = document.getElementById("video");
+    if(videoElement!=null && video.playbackRate>=1.0) {
+        video.playbackRate = video.playbackRate-0.5;
+    }
+    toastMessage.style.display = "block"
+    toastMessage.textContent = video.playbackRate + "x";
+    setTimeout(() => {
+        toastMessage.style.display = "none"
+    },2000)
+})
