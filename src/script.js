@@ -6,6 +6,7 @@ const speedDownElement = document.getElementById("speed-down");
 const volumeUpElement = document.getElementById("volume-up");
 const volumeDownElement = document.getElementById("volume-down");
 const toastMessage = document.getElementById("toast");
+const fullScreenElement = document.getElementById("full-screen");
 
 const inputHandler = (obj) => {
     openVideo.click();
@@ -29,7 +30,7 @@ volumeUpElement.addEventListener("click", () => {
         video.volume = video.volume+0.1;
     }
     toastMessage.style.display = "block"
-    toastMessage.textContent = video.volume * 100;
+    toastMessage.textContent = "Volume: " + video.volume * 100;
     setTimeout(() => {
         toastMessage.style.display = "none"
     },2000)
@@ -41,7 +42,7 @@ volumeDownElement.addEventListener("click", () => {
         video.volume = video.volume-0.1;
     }
     toastMessage.style.display = "block"
-    toastMessage.textContent = video.volume * 100;
+    toastMessage.textContent = "Volume: " + video.volume * 100;
     setTimeout(() => {
         toastMessage.style.display = "none"
     },2000)
@@ -53,7 +54,7 @@ speedUpElement.addEventListener("click", () => {
         video.playbackRate = video.playbackRate+0.5;
     }
     toastMessage.style.display = "block"
-    toastMessage.textContent = video.playbackRate + "x";
+    toastMessage.textContent = "Speed: " + video.playbackRate + "x";
     setTimeout(() => {
         toastMessage.style.display = "none"
     },2000)
@@ -65,8 +66,12 @@ speedDownElement.addEventListener("click", () => {
         video.playbackRate = video.playbackRate-0.5;
     }
     toastMessage.style.display = "block"
-    toastMessage.textContent = video.playbackRate + "x";
+    toastMessage.textContent = "Speed: " + video.playbackRate + "x";
     setTimeout(() => {
         toastMessage.style.display = "none"
     },2000)
+})
+
+fullScreenElement.addEventListener("click", () => {
+    mainElement.requestFullscreen();
 })

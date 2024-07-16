@@ -8,6 +8,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
     </style>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,7 +47,16 @@
     <div id="toast"></div>
     <main id="main-id" class="main">
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer" style="display: flex; justify-content: space-between; margin-left: 1rem; margin-right: 1rem;">
+        <div>
+            <i class="fa-solid fa-backward-fast fa-xl" style="padding: 1.2rem 0.5rem; cursor: pointer;"></i>
+            <i class="fa-solid fa-play fa-xl" style="padding: 1.2rem 0.5rem; cursor: pointer;"></i>
+            <i class="fa-solid fa-forward-fast fa-xl" style="padding: 1.2rem 0.5rem; cursor: pointer;"></i>
+        </div>
+        <div>
+            <i class="fa-solid fa-expand fa-xl" style="padding: 1.2rem 0.5rem; cursor: pointer;" id="full-screen"></i>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
